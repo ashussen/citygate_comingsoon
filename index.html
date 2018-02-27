@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- html5 version of http-equiv="Content-Type"... -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SASCO Australia">
+    <title>Citygate Fellowship Church</title>
+    <link rel="shortcut icon" href="./favicon.png">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+  <body>
+    <div class="main-body">
+      <header>
+        <img class="logo" src="./images/citygate_logo.png"/>
+      </header>
+      <section class="left">
+      </section>
+      <section class="right">
+        <h2>
+          Loves God. <br/>
+          Loves People. <br/>
+          Makes Disciples. <br/>
+        </h2>
+        <p class="small">
+          In order to equip the saints to champion in temporary earthly living and to rule in eternal Kingdom living.
+        </p>
+        <div class="location">
+          <h4>We are located at:</h4>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=203%2F809+Botany+Rd,+Rosebery+NSW+2018" target="_blank">203/809 Botany Road, Mascot, NSW</a>
+          <div class="social-media">
+            <a href="https://www.instagram.com/citygate_fellowship_church/" target="_blank"><img src="./images/instagram_icon.svg" alt="Citygate Instagram"></a>
+            <a href="https://www.facebook.com/citygatefellowship" target="_blank"><img src="./images/facebook_icon.svg" alt="Citygate Facebook"></a>
+          </div>
+        </div>
+        <!--div id="map"> </div-->
+      </section>
+      <div class="after-body">
+        <svg version="1.1" id="bottom-section" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 1920 321" style="enable-background:new 0 0 1920 321;" xml:space="preserve">
+        <style type="text/css">
+        	.st0{fill:#F39431;}
+        </style>
+        <polygon class="st0" points="0,272 1495,0 1920,154 1920,321 0,321 "/>
+        </svg>
+      </div>
+    </div>
+    <script>
+      function initMap() {
+        var citygate = {lat:-33.925482, lng:151.188211};
+        var styledMap = new google.maps.StyledMapType([ { "elementType": "geometry", "stylers": [ { "color": "#f5f5f5" } ] }, { "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "elementType": "labels.text.fill", "stylers": [ { "color": "#616161" } ] }, { "elementType": "labels.text.stroke", "stylers": [ { "color": "#f5f5f5" } ] }, { "featureType": "administrative.land_parcel", "elementType": "labels.text.fill", "stylers": [ { "color": "#bdbdbd" } ] }, { "featureType": "poi", "elementType": "geometry", "stylers": [ { "color": "#eeeeee" } ] }, { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [ { "color": "#757575" } ] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [ { "color": "#e5e5e5" } ] }, { "featureType": "poi.park", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] }, { "featureType": "road", "elementType": "geometry", "stylers": [ { "color": "#ffffff" } ] }, { "featureType": "road.arterial", "elementType": "labels.text.fill", "stylers": [ { "color": "#757575" } ] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [ { "color": "#dadada" } ] }, { "featureType": "road.highway", "elementType": "labels.text.fill", "stylers": [ { "color": "#616161" } ] }, { "featureType": "road.local", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] }, { "featureType": "transit.line", "elementType": "geometry", "stylers": [ { "color": "#e5e5e5" } ] }, { "featureType": "transit.station", "elementType": "geometry", "stylers": [ { "color": "#eeeeee" } ] }, { "featureType": "water", "elementType": "geometry", "stylers": [ { "color": "#c9c9c9" } ] }, { "featureType": "water", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] } ], {name: 'Styled Map'});
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: citygate,
+          mapTypeControl: false,
+          scaleControl: false,
+          streetViewControl: false,
+          rotateControl: false,
+        });
+        map.mapTypes.set('styled_map', styledMap);
+        map.setMapTypeId('styled_map');
+        var marker = new google.maps.Marker({
+          position: citygate,
+          map: map
+        });
+      }
+    </script>
+    <!-- script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYBJoQou2gpY_-nGwnNtCDRF4Yp3vNRwQ&callback=initMap">
+    </script-->
+  </body>
+</html>
